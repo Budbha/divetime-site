@@ -997,3 +997,95 @@ details p {
         align-items: flex-start;
     }
 }
+
+
+/* Hero photo card fix */
+
+.diver-card.photo-card {
+    padding: 0;
+    min-height: auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.diver-card.photo-card::before {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-card-photo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 28px 34px 34px;
+}
+
+.hero-card-content h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+}
+
+.hero-card-content p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+.course-card .course-photo {
+    width: 100%;
+    height: 260px;
+    margin: 0 0 22px;
+    border-radius: 18px;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.course-card .course-photo-training {
+    height: 230px;
+object-position: center 35%;
+}
+
+/* Benefits fix */
+
+#benefits .container {
+    width: min(var(--container), calc(100% - 40px));
+    margin: 0 auto;
+}
+
+#benefits .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+#benefits .benefit-card {
+    min-height: 225px;
+    padding: 26px;
+}
+
+#benefits .benefit-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+    border-radius: 18px;
+    color: var(--aqua);
+    background: rgba(168, 242, 255, 0.10);
+    border: 1px solid rgba(168, 242, 255, 0.24);
+    font-size: 0.9rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
