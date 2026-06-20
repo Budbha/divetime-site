@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiveTime — дайв-клуб</title>
+    <meta name="description" content="DiveTime — современный дайв-клуб для новичков и любителей подводного мира. Курсы, тренировки, пробные занятия и безопасное обучение дайвингу.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <nav class="navbar">
+            <a href="#top" class="logo" aria-label="DiveTime home">
+                <span class="logo-mark">DT</span>
+                <span>DiveTime</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links">
+                <a href="#about">О клубе</a>
+                <a href="#courses">Курсы</a>
+                <a href="#benefits">Преимущества</a>
+                <a href="#instructors">Инструкторы</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacts">Контакты</a>
+                <a href="#booking" class="nav-cta">Записаться</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section">
+            <div class="hero-bg-shape hero-bg-shape-one"></div>
+            <div class="hero-bg-shape hero-bg-shape-two"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">Дайв-клуб для новичков и любителей глубины</p>
+                    <h1>Открой подводный мир вместе с DiveTime</h1>
+                    <p class="hero-text">
+                        Учим дайвингу спокойно, безопасно и понятно. Начни с пробного занятия,
+                        познакомься с оборудованием и почувствуй уверенность под водой.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#booking" class="btn btn-primary">Записаться на пробное занятие</a>
+                        <a href="#courses" class="btn btn-secondary">Посмотреть курсы</a>
+                    </div>
+
+                    <div class="hero-stats" aria-label="Краткие преимущества клуба">
+                        <div>
+                            <strong>0+</strong>
+                            <span>опыт не нужен</span>
+                        </div>
+                        <div>
+                            <strong>1:1</strong>
+                            <span>индивидуальный подход</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>фокус на безопасности</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Морская иллюстрация">
+                    <div class="diver-card">
+                        <div class="sun-rays"></div>
+                        <div class="bubble bubble-one"></div>
+                        <div class="bubble bubble-two"></div>
+                        <div class="bubble bubble-three"></div>
+                        <div class="wave-line"></div>
+                        <div class="diver-icon">🤿</div>
+                        <h2>Пробное занятие</h2>
+                        <p>Мягкое знакомство с дайвингом в спокойной обстановке.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light" id="about">
+            <div class="container two-column">
+                <div>
+                    <p class="eyebrow">О клубе</p>
+                    <h2>DiveTime — место, где глубина становится ближе</h2>
+                </div>
+                <div class="text-block">
+                    <p>
+                        Мы помогаем людям сделать первый шаг в дайвинге без страха и лишней спешки.
+                        На занятиях инструктор объясняет всё простыми словами: как работает оборудование,
+                        как дышать, как вести себя в воде и что делать, если появилось волнение.
+                    </p>
+                    <p>
+                        DiveTime подходит для тех, кто никогда не пробовал дайвинг, хочет уверенно
+                        чувствовать себя в воде или планирует подготовиться к погружениям в открытом водоёме.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="courses">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Курсы и занятия</p>
+                    <h2>Выбери удобный старт</h2>
+                    <p>
+                        Можно прийти на одно пробное занятие или сразу выбрать направление для обучения.
+                    </p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="course-card">
+                        <span class="card-icon">🌊</span>
+                        <h3>Пробное занятие</h3>
+                        <p>Первое знакомство с дайвингом, оборудованием и базовыми правилами безопасности.</p>
+                        <div class="course-meta">Длительность: 60–90 минут</div>
+                        <a href="#booking" class="card-link">Записаться</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="card-icon">🤿</span>
+                        <h3>Дайвинг с нуля</h3>
+                        <p>Пошаговое обучение для тех, кто хочет начать спокойно и без давления.</p>
+                        <div class="course-meta">Длительность: от 4 занятий</div>
+                        <a href="#booking" class="card-link">Подробнее</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="card-icon">📘</span>
+                        <h3>Курс для начинающих</h3>
+                        <p>Теория, практика в воде, базовые навыки и уверенное обращение со снаряжением.</p>
+                        <div class="course-meta">Длительность: 2–4 недели</div>
+                        <a href="#booking" class="card-link">Подробнее</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="card-icon">🏊</span>
+                        <h3>Тренировки в бассейне</h3>
+                        <p>Регулярная практика дыхания, плавучести, спокойствия и контроля движений.</p>
+                        <div class="course-meta">Длительность: 60 минут</div>
+                        <a href="#booking" class="card-link">Записаться</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="card-icon">🧭</span>
+                        <h3>Подготовка к открытому водоёму</h3>
+                        <p>Тренировка навыков, которые пригодятся перед настоящими погружениями.</p>
+                        <div class="course-meta">Длительность: индивидуально</div>
+                        <a href="#booking" class="card-link">Подробнее</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="card-icon">🐠</span>
+                        <h3>Занятия для подростков</h3>
+                        <p>Аккуратное обучение в безопасной среде с внимательным сопровождением инструктора.</p>
+                        <div class="course-meta">Возраст: уточняется</div>
+                        <a href="#booking" class="card-link">Уточнить</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-deep" id="benefits">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Почему выбирают DiveTime</p>
+                    <h2>Безопасно, понятно и без лишнего стресса</h2>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span>🧑‍🏫</span>
+                        <h3>Опытные инструкторы</h3>
+                        <p>Объясняем спокойно, следим за техникой и состоянием ученика.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>🛟</span>
+                        <h3>Безопасное обучение</h3>
+                        <p>Каждый шаг проходит под контролем, без спешки и давления.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>💬</span>
+                        <h3>Понятные объяснения</h3>
+                        <p>Говорим простым языком, особенно если человек пришёл впервые.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>⚙️</span>
+                        <h3>Современное оборудование</h3>
+                        <p>Снаряжение подбирается по размеру и уровню подготовки.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>🌿</span>
+                        <h3>Спокойная атмосфера</h3>
+                        <p>Можно задавать вопросы, волноваться и привыкать к воде постепенно.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>✨</span>
+                        <h3>Старт с нуля</h3>
+                        <p>Не нужно быть профессиональным пловцом или иметь опыт погружений.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light" id="instructors">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Команда</p>
+                    <h2>Инструкторы DiveTime</h2>
+                    <p>Mock-данные можно заменить на реальные имена, фото и опыт клуба.</p>
+                </div>
+
+                <div class="instructor-grid">
+                    <article class="instructor-card">
+                        <div class="instructor-photo">АМ</div>
+                        <h3>Андрей М.</h3>
+                        <p class="instructor-role">Инструктор</p>
+                        <p>Инструктор с большим стажем и оытом/p>
+                    </article>
+
+                    <article class="instructor-card">
+                        <img class="instructor-photo" src="images/DMTry.jpg" alt="Инструктор Даниель">
+                        <h3>Даниель М. </h3>
+                        <p class="instructor-role">Инструктор</p>
+                        <p>Работает с техникой дыхания, плавучестью и уверенностью в воде.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="gallery">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Галерея</p>
+                    <h2>Атмосфера клуба</h2>
+                    <p>Здесь можно заменить заглушки на реальные фотографии тренировок и команды.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item large">
+                        <span>Тренировки</span>
+                    </div>
+                    <div class="gallery-item">
+                        <span>Бассейн</span>
+                    </div>
+                    <div class="gallery-item">
+                        <span>Снаряжение</span>
+                    </div>
+                    <div class="gallery-item">
+                        <span>Команда</span>
+                    </div>
+                    <div class="gallery-item wide">
+                        <span>Подводный мир</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light" id="faq">
+            <div class="container faq-layout">
+                <div>
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Частые вопросы новичков</h2>
+                    <p class="muted">
+                        Самое важное — начинать можно спокойно. Инструктор будет рядом и всё объяснит.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+                    <details open>
+                        <summary>Можно ли заниматься без опыта?</summary>
+                        <p>Да. Пробное занятие как раз создано для тех, кто никогда не пробовал дайвинг.</p>
+                    </details>
+
+                    <details>
+                        <summary>Это безопасно?</summary>
+                        <p>Да, если обучение проходит с инструктором и соблюдаются правила. На занятии всё делается постепенно.</p>
+                    </details>
+
+                    <details>
+                        <summary>Нужно ли хорошо плавать?</summary>
+                        <p>Не обязательно быть спортсменом. Достаточно базово держаться на воде и слушать инструктора.</p>
+                    </details>
+
+                    <details>
+                        <summary>Что взять с собой?</summary>
+                        <p>Обычно нужны купальник или плавки, полотенце, тапочки и хорошее настроение. Остальное уточним перед занятием.</p>
+                    </details>
+
+                    <details>
+                        <summary>С какого возраста можно заниматься?</summary>
+                        <p>Возраст зависит от формата занятия и правил клуба. Лучше уточнить при записи.</p>
+                    </details>
+
+                    <details>
+                        <summary>Сколько длится занятие?</summary>
+                        <p>Пробное занятие обычно занимает около 60–90 минут вместе с объяснением и подготовкой.</p>
+                    </details>
+
+                    <details>
+                        <summary>Нужно ли своё оборудование?</summary>
+                        <p>Нет. Для пробного занятия и обучения оборудование обычно предоставляет клуб.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section booking-section" id="booking">
+            <div class="container booking-grid">
+                <div>
+                    <p class="eyebrow">Запись</p>
+                    <h2>Запишись на пробное занятие</h2>
+                    <p>
+                        Оставь заявку — мы свяжемся с тобой, подберём удобное время
+                        и расскажем, как подготовиться к первому занятию.
+                    </p>
+
+                    <div class="booking-note">
+                        <strong>Главное:</strong> опыт не нужен. Достаточно желания попробовать и готовности слушать инструктора.
+                    </div>
+                </div>
+
+                <form class="booking-form">
+                    <label>
+                        Имя
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                    </label>
+
+                    <label>
+                        Телефон
+                        <input type="tel" name="phone" placeholder="+372 ..." required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="name@email.com">
+                    </label>
+
+                    <label>
+                        Интересующее занятие
+                        <select name="course" required>
+                            <option value="">Выберите вариант</option>
+                            <option>Пробное занятие</option>
+                            <option>Дайвинг с нуля</option>
+                            <option>Курс для начинающих</option>
+                            <option>Тренировки в бассейне</option>
+                            <option>Подготовка к открытому водоёму</option>
+                            <option>Занятия для подростков</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Комментарий
+                        <textarea name="message" rows="4" placeholder="Например: хочу попробовать впервые, есть вопросы по безопасности"></textarea>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                    <p class="form-message" role="status"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section section-light" id="contacts">
+            <div class="container contacts-grid">
+                <div>
+                    <p class="eyebrow">Контакты</p>
+                    <h2>Свяжись с DiveTime</h2>
+
+                    <div class="contact-list">
+                        <p><strong>Телефон:</strong> +372 55599896</p>
+                        <p><strong>Email:</strong> malkov.daniel@gmail.com</p>
+                        <p><strong>Адрес:</strong> Raua 1</p>
+                        <p><strong>Соцсети:</strong> Instagram · Facebook · TikTok</p>
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    <span>Карта / Google Maps placeholder</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 DiveTime. Все права защищены.</p>
+            <a href="#top">Наверх ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
