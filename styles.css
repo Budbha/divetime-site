@@ -1089,3 +1089,64 @@ object-position: center 35%;
     font-weight: 900;
     letter-spacing: 0.08em;
 }
+
+/* Gallery photos fix */
+
+#gallery .gallery-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Убираем старые декоративные точки поверх карточек */
+#gallery .gallery-item::before {
+    display: none;
+}
+
+/* Затемнение поверх фото, чтобы текст читался */
+#gallery .gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(6, 27, 51, 0.05),
+        rgba(6, 27, 51, 0.72)
+    );
+}
+
+#gallery .gallery-item span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Фото из твоих уже существующих файлов */
+#gallery .gallery-training {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/trainig.jpg");
+}
+
+#gallery .gallery-pool {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/courses.jpg");
+}
+
+#gallery .gallery-gear {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/scubagear.jpg");
+}
+
+#gallery .gallery-team {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/divehero.jpg");
+}
+
+#gallery .gallery-underwater {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/reaf.jpg");
+}
