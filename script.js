@@ -19,10 +19,27 @@ if (menuToggle && navLinks) {
 }
 
 if (form && formMessage) {
+
+    emailjs.init("ytGJlEL6XswFfUEHJ");
+
     form.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        formMessage.textContent = "Заявка подготовлена. Позже сюда можно подключить backend или отправку на email.";
-        form.reset();
+        const formData = {
+            name: form.name.value,
+            phone: form.phone.value,
+            email: form.email.value,
+            course: form.course.value,
+            message: form.message.value
+        };
+
+        emailjs.send("service_plondtu", "template_4q698od", formData)
+            .then(() => {
+                formMessage.textContent = "✅";
+                form.reset();
+            })
+            .catch(() => {
+                formMessage.textContent = "❌";
+            });
     });
 }
