@@ -1150,3 +1150,55 @@ object-position: center 35%;
         linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
         url("images/reaf.jpg");
 }
+
+
+/* =========================
+   Strong mobile benefits fix
+========================= */
+
+@media (max-width: 900px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #benefits .benefits-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    #benefits .benefit-card {
+        width: 100%;
+        min-height: auto !important;
+        padding: 22px !important;
+        border-radius: 22px;
+    }
+
+    #benefits .benefit-number {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 18px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+    }
+
+    #benefits .benefit-card h3 {
+        font-size: 1.25rem;
+        line-height: 1.15;
+        margin-bottom: 10px;
+    }
+
+    #benefits .benefit-card p {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero::after {
+        height: 70px;
+        background:
+            radial-gradient(90% 60px at 50% 100%, #f8fdff 0%, #f8fdff 55%, transparent 56%);
+    }
+}
