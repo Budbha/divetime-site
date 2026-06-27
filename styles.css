@@ -1202,3 +1202,296 @@ object-position: center 35%;
             radial-gradient(90% 60px at 50% 100%, #f8fdff 0%, #f8fdff 55%, transparent 56%);
     }
 }
+
+
+/* =========================
+   Courses section update
+========================= */
+
+#courses .section-heading {
+    margin-bottom: 54px;
+}
+
+.course-group {
+    margin-top: 54px;
+}
+
+.course-group:first-of-type {
+    margin-top: 0;
+}
+
+.course-group-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.course-group-heading span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border-radius: 16px;
+    color: var(--navy);
+    background: linear-gradient(135deg, var(--aqua), var(--turquoise));
+    font-size: 0.9rem;
+    font-weight: 950;
+    letter-spacing: 0.08em;
+    box-shadow: 0 14px 30px rgba(32, 211, 194, 0.22);
+}
+
+.course-group-heading h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    letter-spacing: -0.04em;
+}
+
+#courses .courses-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+#courses .course-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 24px;
+    border-radius: 26px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.92));
+}
+
+#courses .course-photo {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    background:
+        linear-gradient(135deg, rgba(168, 242, 255, 0.35), rgba(32, 211, 194, 0.12));
+}
+
+#courses .course-tag {
+    width: fit-content;
+    margin-bottom: 14px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    color: var(--ocean);
+    background: rgba(32, 211, 194, 0.11);
+    border: 1px solid rgba(32, 211, 194, 0.18);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+#courses .course-card h3 {
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-size: 1.18rem;
+    line-height: 1.15;
+}
+
+#courses .course-card p {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.96rem;
+    line-height: 1.55;
+}
+
+#courses .course-meta {
+    margin: 18px 0 18px;
+    color: var(--ocean);
+    font-size: 0.86rem;
+    font-weight: 900;
+}
+
+#courses .card-link {
+    margin-top: auto;
+}
+
+/* Individual photo crops */
+
+#course-trial .course-photo,
+#course-rescue .course-photo {
+    object-position: center 42%;
+}
+
+#course-open-water .course-photo,
+#course-divemaster .course-photo {
+    object-position: center 35%;
+}
+
+#course-advanced .course-photo,
+#course-navigation .course-photo {
+    object-position: center;
+}
+
+#course-nitrox .course-photo,
+#course-first-aid .course-photo {
+    object-position: center;
+}
+
+#course-buoyancy .course-photo,
+#course-deep .course-photo {
+    object-position: center 40%;
+}
+
+/* Responsive courses */
+
+@media (max-width: 980px) {
+    #courses .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #courses .course-photo {
+        height: 180px;
+    }
+}
+
+@media (max-width: 640px) {
+    #courses .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .course-group {
+        margin-top: 44px;
+    }
+
+    .course-group-heading {
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .course-group-heading span {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        border-radius: 14px;
+        font-size: 0.8rem;
+    }
+
+    .course-group-heading h3 {
+        font-size: 1.35rem;
+    }
+
+    #courses .courses-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    #courses .course-card {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    #courses .course-photo {
+        height: 180px;
+        border-radius: 18px;
+        margin-bottom: 18px;
+    }
+
+    #courses .course-card h3 {
+        font-size: 1.15rem;
+    }
+}
+
+/* =========================
+   Better course section dividers
+========================= */
+
+.course-group {
+    margin-top: 72px;
+}
+
+.course-group:first-of-type {
+    margin-top: 0;
+}
+
+.course-group-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    margin-bottom: 34px;
+}
+
+.course-group-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    height: 32px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: rgba(32, 211, 194, 0.12);
+    color: var(--ocean);
+    border: 1px solid rgba(32, 211, 194, 0.18);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.course-group-heading h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    color: var(--navy);
+    font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.course-group-heading h3::before,
+.course-group-heading h3::after {
+    content: "";
+    flex: 1;
+    max-width: 180px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(6, 27, 51, 0),
+        rgba(6, 27, 51, 0.22),
+        rgba(32, 211, 194, 0.35),
+        rgba(6, 27, 51, 0.22),
+        rgba(6, 27, 51, 0)
+    );
+}
+
+@media (max-width: 768px) {
+    .course-group {
+        margin-top: 56px;
+    }
+
+    .course-group-heading {
+        margin-bottom: 24px;
+        gap: 10px;
+    }
+
+    .course-group-heading h3 {
+        font-size: 1.35rem;
+        gap: 14px;
+    }
+
+    .course-group-heading h3::before,
+    .course-group-heading h3::after {
+        max-width: 70px;
+    }
+
+    .course-group-number {
+        min-width: 46px;
+        height: 28px;
+        font-size: 0.74rem;
+    }
+}
