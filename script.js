@@ -32,8 +32,11 @@ if (form && formMessage) {
             course: form.course.value,
             message: form.message.value
         };
-
         emailjs.send("service_plondtu", "template_4q698od", formData)
+
+            .then(() => {
+                return emailjs.send("service_plondtu", "template_2lmx1qq", formData);
+            })
             .then(() => {
                 formMessage.textContent = "✅";
                 form.reset();
