@@ -1495,3 +1495,36 @@ object-position: center 35%;
         font-size: 0.74rem;
     }
 }
+
+.course-group-heading {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+.course-group-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(420px, 70%);
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(6, 27, 51, 0),
+        rgba(32, 211, 194, 0.22),
+        rgba(6, 27, 51, 0.16),
+        rgba(32, 211, 194, 0.22),
+        rgba(6, 27, 51, 0)
+    );
+}
+
+@media (max-width: 768px) {
+    .course-group-heading {
+        padding-bottom: 18px;
+    }
+
+    .course-group-heading::after {
+        width: 78%;
+    }
+}
