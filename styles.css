@@ -1,5 +1,5 @@
 /* =========================
-   DiveTime base styles
+   DiveTime clean styles
 ========================= */
 
 :root {
@@ -8,19 +8,12 @@
     --ocean: #0b5f8a;
     --turquoise: #20d3c2;
     --aqua: #a8f2ff;
-    --sand: #f4e7c5;
-    --coral: #ff7b66;
     --white: #ffffff;
     --mist: #eaf8fb;
     --text: #123047;
     --muted: #5f7485;
-    --card: rgba(255, 255, 255, 0.9);
-    --glass: rgba(255, 255, 255, 0.12);
-    --border: rgba(255, 255, 255, 0.2);
     --shadow: 0 24px 70px rgba(6, 27, 51, 0.18);
-    --radius-xl: 32px;
     --radius-lg: 24px;
-    --radius-md: 18px;
     --container: 1180px;
 }
 
@@ -30,6 +23,13 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -67,10 +67,16 @@ textarea {
     padding: 96px 0;
 }
 
-.section-light {
+.section-light,
+#about,
+#instructors,
+#gallery,
+#faq,
+#contacts {
     background:
-        radial-gradient(circle at top left, rgba(32, 211, 194, 0.14), transparent 32%),
-        linear-gradient(180deg, #f8fdff 0%, #edf9fc 100%);
+        radial-gradient(circle at 12% 8%, rgba(32, 211, 194, 0.13), transparent 32%),
+        radial-gradient(circle at 88% 18%, rgba(168, 242, 255, 0.18), transparent 30%),
+        linear-gradient(180deg, #f7fdff 0%, #eaf8fb 55%, #f8fdff 100%);
 }
 
 .section-deep {
@@ -180,6 +186,12 @@ p {
     color: var(--navy);
     background: linear-gradient(135deg, var(--aqua), var(--turquoise));
     box-shadow: 0 12px 30px rgba(32, 211, 194, 0.32);
+}
+
+.logo-image {
+    width: 160px;
+    height: auto;
+    display: block;
 }
 
 .nav-links {
@@ -343,12 +355,7 @@ p {
 .diver-card {
     position: relative;
     width: min(430px, 100%);
-    min-height: 530px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     overflow: hidden;
-    padding: 34px;
     border-radius: 42px;
     background:
         linear-gradient(180deg, rgba(168, 242, 255, 0.18), rgba(32, 211, 194, 0.04)),
@@ -365,86 +372,34 @@ p {
     background:
         repeating-radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 34px);
     opacity: 0.38;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.sun-rays {
-    position: absolute;
-    top: -120px;
-    left: 50%;
-    width: 300px;
-    height: 540px;
-    transform: translateX(-50%);
-    background: conic-gradient(from 170deg, transparent 0 18deg, rgba(168, 242, 255, 0.22) 22deg 32deg, transparent 36deg 58deg, rgba(168, 242, 255, 0.18) 62deg 70deg, transparent 76deg);
-    filter: blur(2px);
-    opacity: 0.65;
-}
-
-.diver-icon {
+.hero-card-photo {
     position: relative;
     z-index: 2;
-    margin-bottom: 110px;
-    text-align: center;
-    font-size: 7rem;
-    filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.22));
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
-.diver-card h2,
-.diver-card p {
+.hero-card-content {
     position: relative;
     z-index: 2;
+    padding: 28px 34px 34px;
 }
 
-.diver-card h2 {
-    margin-bottom: 10px;
+.hero-card-content h2 {
+    margin: 0 0 10px;
     font-size: 2rem;
 }
 
-.diver-card p {
-    margin-bottom: 0;
+.hero-card-content p {
+    margin: 0;
     color: rgba(255, 255, 255, 0.72);
-}
-
-.bubble {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(168, 242, 255, 0.8);
-    background: rgba(168, 242, 255, 0.14);
-    animation: float 5s ease-in-out infinite;
-}
-
-.bubble-one {
-    width: 34px;
-    height: 34px;
-    top: 90px;
-    left: 58px;
-}
-
-.bubble-two {
-    width: 18px;
-    height: 18px;
-    top: 180px;
-    right: 84px;
-    animation-delay: 1s;
-}
-
-.bubble-three {
-    width: 48px;
-    height: 48px;
-    bottom: 190px;
-    left: 70px;
-    animation-delay: 1.8s;
-}
-
-.wave-line {
-    position: absolute;
-    left: -20%;
-    right: -20%;
-    bottom: 145px;
-    height: 120px;
-    background:
-        radial-gradient(70px 28px at 70px 50px, transparent 58%, rgba(168, 242, 255, 0.24) 60%, transparent 64%) repeat-x;
-    background-size: 140px 80px;
-    opacity: 0.68;
 }
 
 .hero-bg-shape {
@@ -486,14 +441,14 @@ p {
 }
 
 /* =========================
-   Cards
+   Shared cards
 ========================= */
 
 .cards-grid,
 .benefits-grid,
 .instructor-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
 
@@ -506,9 +461,94 @@ p {
     box-shadow: 0 20px 55px rgba(8, 41, 70, 0.08);
 }
 
+/* =========================
+   Courses
+========================= */
+
+#courses {
+    background:
+        radial-gradient(circle at 10% 0%, rgba(32, 211, 194, 0.10), transparent 30%),
+        radial-gradient(circle at 90% 40%, rgba(168, 242, 255, 0.16), transparent 32%),
+        linear-gradient(180deg, #f8fdff 0%, #edf9fc 50%, #f7fdff 100%);
+}
+
+#courses .section-heading {
+    margin-bottom: 54px;
+}
+
+.course-group {
+    margin-top: 72px;
+}
+
+.course-group:first-of-type {
+    margin-top: 0;
+}
+
+.course-group-heading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    margin-bottom: 34px;
+    padding-bottom: 22px;
+}
+
+.course-group-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 28px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--aqua), var(--turquoise));
+    color: var(--navy);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    box-shadow: 0 10px 24px rgba(32, 211, 194, 0.18);
+}
+
+.course-group-heading h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.course-group-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(440px, 72%);
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(6, 27, 51, 0),
+        rgba(32, 211, 194, 0.24),
+        rgba(6, 27, 51, 0.18),
+        rgba(32, 211, 194, 0.24),
+        rgba(6, 27, 51, 0)
+    );
+}
+
+#courses .courses-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
 .course-card {
-    padding: 28px;
-    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.92));
     border: 1px solid rgba(8, 41, 70, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -518,30 +558,55 @@ p {
     box-shadow: 0 30px 75px rgba(8, 41, 70, 0.14);
 }
 
-.card-icon {
-    display: grid;
-    place-items: center;
-    width: 54px;
-    height: 54px;
-    margin-bottom: 22px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, rgba(168, 242, 255, 0.45), rgba(32, 211, 194, 0.18));
-    font-size: 1.65rem;
+.course-photo {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    background:
+        linear-gradient(135deg, rgba(168, 242, 255, 0.35), rgba(32, 211, 194, 0.12));
+}
+
+.course-tag {
+    width: fit-content;
+    margin-bottom: 14px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    color: var(--ocean);
+    background: rgba(32, 211, 194, 0.11);
+    border: 1px solid rgba(32, 211, 194, 0.18);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-size: 1.18rem;
+    line-height: 1.15;
 }
 
 .course-card p {
+    margin-bottom: 0;
     color: var(--muted);
+    font-size: 0.96rem;
+    line-height: 1.55;
 }
 
 .course-meta {
-    margin: 22px 0;
+    margin: 18px 0;
     color: var(--ocean);
-    font-weight: 800;
-    font-size: 0.92rem;
+    font-size: 0.86rem;
+    font-weight: 900;
 }
 
 .card-link {
     display: inline-flex;
+    margin-top: auto;
     color: var(--navy);
     font-weight: 900;
 }
@@ -556,26 +621,52 @@ p {
     transform: translateX(4px);
 }
 
+#course-trial .course-photo,
+#course-rescue .course-photo {
+    object-position: center 42%;
+}
+
+#course-open-water .course-photo,
+#course-divemaster .course-photo {
+    object-position: center 35%;
+}
+
+#course-buoyancy .course-photo,
+#course-deep .course-photo {
+    object-position: center 40%;
+}
+
 /* =========================
    Benefits
 ========================= */
 
+#benefits .benefits-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
 .benefit-card {
+    min-height: 225px;
     padding: 26px;
     background: rgba(255, 255, 255, 0.09);
     border: 1px solid rgba(255, 255, 255, 0.14);
     backdrop-filter: blur(16px);
 }
 
-.benefit-card span {
-    display: inline-grid;
-    place-items: center;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 22px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.12);
-    font-size: 1.45rem;
+.benefit-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+    border-radius: 18px;
+    color: var(--aqua);
+    background: rgba(168, 242, 255, 0.10);
+    border: 1px solid rgba(168, 242, 255, 0.24);
+    font-size: 0.9rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
 }
 
 .benefit-card p {
@@ -585,6 +676,27 @@ p {
 /* =========================
    Instructors
 ========================= */
+
+.instructors-section {
+    padding-bottom: 110px;
+}
+
+.instructors-layout {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    align-items: start;
+    gap: 60px;
+}
+
+.instructors-intro p:last-child {
+    max-width: 520px;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.instructor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
 .instructor-card {
     padding: 26px;
@@ -603,6 +715,15 @@ p {
     background: linear-gradient(135deg, var(--ocean), var(--navy));
 }
 
+.instructor-photo-placeholder {
+    display: grid;
+    place-items: center;
+    color: rgba(168, 242, 255, 0.95);
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+}
+
 .instructor-role {
     margin-bottom: 12px;
     color: var(--ocean);
@@ -616,6 +737,11 @@ p {
 /* =========================
    Gallery
 ========================= */
+
+#gallery {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
 
 .gallery-grid {
     display: grid;
@@ -631,20 +757,21 @@ p {
     overflow: hidden;
     padding: 24px;
     border-radius: var(--radius-lg);
-    background:
-        linear-gradient(180deg, rgba(6, 27, 51, 0.08), rgba(6, 27, 51, 0.58)),
-        radial-gradient(circle at 28% 18%, rgba(168, 242, 255, 0.7), transparent 24%),
-        linear-gradient(135deg, #0b5f8a, #061b33);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--deep);
 }
 
-.gallery-item::before {
+.gallery-item::after {
     content: "";
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(circle at 20% 70%, rgba(255, 255, 255, 0.22) 0 2px, transparent 3px),
-        radial-gradient(circle at 70% 35%, rgba(255, 255, 255, 0.16) 0 2px, transparent 3px),
-        radial-gradient(circle at 82% 80%, rgba(255, 255, 255, 0.2) 0 3px, transparent 4px);
+    background: linear-gradient(
+        180deg,
+        rgba(6, 27, 51, 0.05),
+        rgba(6, 27, 51, 0.72)
+    );
 }
 
 .gallery-item.large {
@@ -657,10 +784,40 @@ p {
 
 .gallery-item span {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     color: var(--white);
     font-size: 1.2rem;
     font-weight: 900;
+}
+
+.gallery-training {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/trainig.jpg");
+}
+
+.gallery-pool {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/courses.jpg");
+}
+
+.gallery-gear {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/scubagear.jpg");
+}
+
+.gallery-team {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/divehero.jpg");
+}
+
+.gallery-underwater {
+    background-image:
+        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
+        url("images/reaf.jpg");
 }
 
 /* =========================
@@ -764,10 +921,6 @@ details p {
     color: rgba(255, 255, 255, 0.48);
 }
 
-.booking-form select {
-    color: rgba(255, 255, 255, 0.9);
-}
-
 .booking-form option {
     color: var(--text);
 }
@@ -853,21 +1006,6 @@ details p {
 }
 
 /* =========================
-   Animation
-========================= */
-
-@keyframes float {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-18px);
-    }
-}
-
-/* =========================
    Responsive
 ========================= */
 
@@ -908,7 +1046,8 @@ details p {
     .two-column,
     .faq-layout,
     .booking-grid,
-    .contacts-grid {
+    .contacts-grid,
+    .instructors-layout {
         grid-template-columns: 1fr;
     }
 
@@ -922,8 +1061,10 @@ details p {
 
     .cards-grid,
     .benefits-grid,
-    .instructor-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .instructor-grid,
+    #courses .courses-grid,
+    #benefits .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .gallery-grid {
@@ -937,549 +1078,13 @@ details p {
     }
 }
 
-@media (max-width: 640px) {
-    .container,
-    .navbar {
-        width: min(100% - 28px, var(--container));
-    }
-
-    .section {
-        padding: 72px 0;
-    }
-
-    .hero {
-        padding-top: 120px;
-    }
-
-    h1 {
-        font-size: clamp(2.7rem, 15vw, 4.4rem);
-    }
-
-    .hero-actions,
-    .hero-stats {
-        flex-direction: column;
-    }
-
-    .btn,
-    .hero-stats div {
-        width: 100%;
-    }
-
-    .diver-card {
-        min-height: 430px;
-        padding: 26px;
-        border-radius: 30px;
-    }
-
-    .diver-icon {
-        margin-bottom: 74px;
-        font-size: 5rem;
-    }
-
-    .cards-grid,
-    .benefits-grid,
-    .instructor-grid,
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-auto-rows: 190px;
-    }
-
-    .booking-form {
-        padding: 22px;
-        border-radius: 24px;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-
-/* Hero photo card fix */
-
-.diver-card.photo-card {
-    padding: 0;
-    min-height: auto;
-    justify-content: flex-start;
-    align-items: stretch;
-    overflow: hidden;
-}
-
-.diver-card.photo-card::before {
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-card-photo {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.hero-card-content {
-    position: relative;
-    z-index: 2;
-    padding: 28px 34px 34px;
-}
-
-.hero-card-content h2 {
-    margin: 0 0 10px;
-    font-size: 2rem;
-}
-
-.hero-card-content p {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.72);
-}
-
-
-.course-card .course-photo {
-    width: 100%;
-    height: 260px;
-    margin: 0 0 22px;
-    border-radius: 18px;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-}
-
-.course-card .course-photo-training {
-    height: 230px;
-object-position: center 35%;
-}
-
-/* Benefits fix */
-
-#benefits .container {
-    width: min(var(--container), calc(100% - 40px));
-    margin: 0 auto;
-}
-
-#benefits .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-}
-
-#benefits .benefit-card {
-    min-height: 225px;
-    padding: 26px;
-}
-
-#benefits .benefit-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    margin-bottom: 24px;
-    border-radius: 18px;
-    color: var(--aqua);
-    background: rgba(168, 242, 255, 0.10);
-    border: 1px solid rgba(168, 242, 255, 0.24);
-    font-size: 0.9rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-}
-
-/* Gallery photos fix */
-
-#gallery .gallery-item {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Убираем старые декоративные точки поверх карточек */
-#gallery .gallery-item::before {
-    display: none;
-}
-
-/* Затемнение поверх фото, чтобы текст читался */
-#gallery .gallery-item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(6, 27, 51, 0.05),
-        rgba(6, 27, 51, 0.72)
-    );
-}
-
-#gallery .gallery-item span {
-    position: relative;
-    z-index: 2;
-}
-
-/* Фото из твоих уже существующих файлов */
-#gallery .gallery-training {
-    background-image:
-        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
-        url("images/trainig.jpg");
-}
-
-#gallery .gallery-pool {
-    background-image:
-        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
-        url("images/courses.jpg");
-}
-
-#gallery .gallery-gear {
-    background-image:
-        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
-        url("images/scubagear.jpg");
-}
-
-#gallery .gallery-team {
-    background-image:
-        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
-        url("images/divehero.jpg");
-}
-
-#gallery .gallery-underwater {
-    background-image:
-        linear-gradient(rgba(6, 27, 51, 0.15), rgba(6, 27, 51, 0.65)),
-        url("images/reaf.jpg");
-}
-
-
-/* =========================
-   Strong mobile benefits fix
-========================= */
-
-@media (max-width: 900px) {
-    html,
-    body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    #benefits .benefits-grid {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-    }
-
-    #benefits .benefit-card {
-        width: 100%;
-        min-height: auto !important;
-        padding: 22px !important;
-        border-radius: 22px;
-    }
-
-    #benefits .benefit-number {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 18px;
-        border-radius: 15px;
-        font-size: 0.85rem;
-    }
-
-    #benefits .benefit-card h3 {
-        font-size: 1.25rem;
-        line-height: 1.15;
-        margin-bottom: 10px;
-    }
-
-    #benefits .benefit-card p {
-        font-size: 0.98rem;
-        line-height: 1.55;
-    }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .hero::after {
         height: 70px;
         background:
             radial-gradient(90% 60px at 50% 100%, #f8fdff 0%, #f8fdff 55%, transparent 56%);
     }
-}
 
-
-/* =========================
-   Courses section update
-========================= */
-
-#courses .section-heading {
-    margin-bottom: 54px;
-}
-
-.course-group {
-    margin-top: 54px;
-}
-
-.course-group:first-of-type {
-    margin-top: 0;
-}
-
-.course-group-heading {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 22px;
-}
-
-.course-group-heading span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 46px;
-    flex: 0 0 46px;
-    border-radius: 16px;
-    color: var(--navy);
-    background: linear-gradient(135deg, var(--aqua), var(--turquoise));
-    font-size: 0.9rem;
-    font-weight: 950;
-    letter-spacing: 0.08em;
-    box-shadow: 0 14px 30px rgba(32, 211, 194, 0.22);
-}
-
-.course-group-heading h3 {
-    margin: 0;
-    color: var(--navy);
-    font-size: clamp(1.45rem, 2.2vw, 2rem);
-    letter-spacing: -0.04em;
-}
-
-#courses .courses-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-}
-
-#courses .course-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    padding: 24px;
-    border-radius: 26px;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.92));
-}
-
-#courses .course-photo {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: center;
-    background:
-        linear-gradient(135deg, rgba(168, 242, 255, 0.35), rgba(32, 211, 194, 0.12));
-}
-
-#courses .course-tag {
-    width: fit-content;
-    margin-bottom: 14px;
-    padding: 7px 11px;
-    border-radius: 999px;
-    color: var(--ocean);
-    background: rgba(32, 211, 194, 0.11);
-    border: 1px solid rgba(32, 211, 194, 0.18);
-    font-size: 0.75rem;
-    font-weight: 900;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-#courses .course-card h3 {
-    margin-bottom: 10px;
-    color: var(--navy);
-    font-size: 1.18rem;
-    line-height: 1.15;
-}
-
-#courses .course-card p {
-    margin-bottom: 0;
-    color: var(--muted);
-    font-size: 0.96rem;
-    line-height: 1.55;
-}
-
-#courses .course-meta {
-    margin: 18px 0 18px;
-    color: var(--ocean);
-    font-size: 0.86rem;
-    font-weight: 900;
-}
-
-#courses .card-link {
-    margin-top: auto;
-}
-
-/* Individual photo crops */
-
-#course-trial .course-photo,
-#course-rescue .course-photo {
-    object-position: center 42%;
-}
-
-#course-open-water .course-photo,
-#course-divemaster .course-photo {
-    object-position: center 35%;
-}
-
-#course-advanced .course-photo,
-#course-navigation .course-photo {
-    object-position: center;
-}
-
-#course-nitrox .course-photo,
-#course-first-aid .course-photo {
-    object-position: center;
-}
-
-#course-buoyancy .course-photo,
-#course-deep .course-photo {
-    object-position: center 40%;
-}
-
-/* Responsive courses */
-
-@media (max-width: 980px) {
-    #courses .courses-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    #courses .course-photo {
-        height: 180px;
-    }
-}
-
-@media (max-width: 640px) {
-    #courses .section-heading {
-        margin-bottom: 38px;
-    }
-
-    .course-group {
-        margin-top: 44px;
-    }
-
-    .course-group-heading {
-        align-items: flex-start;
-        gap: 12px;
-        margin-bottom: 18px;
-    }
-
-    .course-group-heading span {
-        width: 40px;
-        height: 40px;
-        flex-basis: 40px;
-        border-radius: 14px;
-        font-size: 0.8rem;
-    }
-
-    .course-group-heading h3 {
-        font-size: 1.35rem;
-    }
-
-    #courses .courses-grid {
-        grid-template-columns: 1fr !important;
-        gap: 16px;
-    }
-
-    #courses .course-card {
-        padding: 20px;
-        border-radius: 22px;
-    }
-
-    #courses .course-photo {
-        height: 180px;
-        border-radius: 18px;
-        margin-bottom: 18px;
-    }
-
-    #courses .course-card h3 {
-        font-size: 1.15rem;
-    }
-}
-
-/* =========================
-   Clean course group headings
-========================= */
-
-.course-group {
-    margin-top: 72px;
-}
-
-.course-group:first-of-type {
-    margin-top: 0;
-}
-
-.course-group-heading {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 14px;
-    margin-bottom: 34px;
-    padding-bottom: 22px;
-}
-
-.course-group-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    height: 28px;
-    padding: 0 12px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, var(--aqua), var(--turquoise));
-    color: var(--navy);
-    font-size: 0.72rem;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    box-shadow: 0 10px 24px rgba(32, 211, 194, 0.18);
-}
-
-.course-group-heading h3 {
-    margin: 0;
-    color: var(--navy);
-    font-size: clamp(1.7rem, 2.5vw, 2.35rem);
-    line-height: 1.1;
-    letter-spacing: -0.04em;
-    font-weight: 900;
-}
-
-/* Убираем боковые линии */
-.course-group-heading h3::before,
-.course-group-heading h3::after {
-    display: none;
-}
-
-/* Одна аккуратная линия снизу */
-.course-group-heading::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: min(440px, 72%);
-    height: 1px;
-    background: linear-gradient(
-        90deg,
-        rgba(6, 27, 51, 0),
-        rgba(32, 211, 194, 0.24),
-        rgba(6, 27, 51, 0.18),
-        rgba(32, 211, 194, 0.24),
-        rgba(6, 27, 51, 0)
-    );
-}
-
-/* =========================
-   Mobile
-========================= */
-
-@media (max-width: 768px) {
     .course-group {
         margin-top: 56px;
     }
@@ -1504,4 +1109,105 @@ object-position: center 35%;
     .course-group-heading::after {
         width: 82%;
     }
+
+    #benefits .benefit-card {
+        min-height: auto;
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .benefit-number {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 18px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+    }
 }
+
+@media (max-width: 640px) {
+    .container,
+    .navbar {
+        width: min(100% - 28px, var(--container));
+    }
+
+    .section {
+        padding: 72px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 72px;
+    }
+
+    h1 {
+        font-size: clamp(2.7rem, 15vw, 4.4rem);
+    }
+
+    .hero-actions,
+    .hero-stats {
+        flex-direction: column;
+    }
+
+    .btn,
+    .hero-stats div {
+        width: 100%;
+    }
+
+    .diver-card {
+        border-radius: 30px;
+    }
+
+    .hero-card-photo {
+        height: 220px;
+    }
+
+    .hero-card-content {
+        padding: 24px;
+    }
+
+    .hero-card-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .cards-grid,
+    .benefits-grid,
+    .instructor-grid,
+    #courses .courses-grid,
+    #benefits .benefits-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .course-card,
+    .instructor-card {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .course-photo {
+        height: 180px;
+        border-radius: 18px;
+        margin-bottom: 18px;
+    }
+
+    .course-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .gallery-grid {
+        grid-auto-rows: 190px;
+    }
+
+    .booking-form {
+        padding: 22px;
+        border-radius: 24px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+

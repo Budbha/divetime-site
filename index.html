@@ -35,6 +35,7 @@
     </header>
 
     <main>
+        <!-- HERO START -->
         <section class="hero section">
             <div class="hero-bg-shape hero-bg-shape-one"></div>
             <div class="hero-bg-shape hero-bg-shape-two"></div>
@@ -79,14 +80,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
+        <!-- HERO END -->
 
+        <!-- ABOUT START -->
         <section class="section section-light" id="about">
             <div class="container two-column">
                 <div>
                     <p class="eyebrow">О клубе</p>
                     <h2>DiveTime — место, где глубина становится ближе</h2>
                 </div>
+
                 <div class="text-block">
                     <p>
                         Мы помогаем людям сделать первый шаг в дайвинге без страха и лишней спешки.
@@ -100,202 +105,270 @@
                 </div>
             </div>
         </section>
+        <!-- ABOUT END -->
 
-       <section class="section" id="courses">
-    <div class="container">
-        <div class="section-heading">
-            <p class="eyebrow">Курсы и занятия</p>
-            <h2>Выбери направление обучения</h2>
-            <p>
-                Можно начать с пробного занятия, пройти базовый курс или продолжить обучение
-                через специализации, безопасность и профессиональный уровень.
-            </p>
-        </div>
+        <!-- COURSES START -->
+        <section class="section" id="courses">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Курсы и занятия</p>
+                    <h2>Выбери направление обучения</h2>
+                    <p>
+                        Можно начать с пробного занятия, пройти базовый курс или продолжить обучение
+                        через специализации, безопасность и профессиональный уровень.
+                    </p>
+                </div>
 
-        <div class="course-group">
-            <div class="course-group-heading">
-                <span>01</span>
-                <h3>Старт и базовое обучение</h3>
+                <div class="course-group">
+                    <div class="course-group-heading">
+                        <span class="course-group-number">01</span>
+                        <h3>Старт и базовое обучение</h3>
+                    </div>
+
+                    <div class="cards-grid courses-grid">
+                        <article class="course-card" id="course-trial">
+                            <img src="images/course-trial.jpg" alt="Пробное занятие по дайвингу" class="course-photo">
+                            <div class="course-tag">Вводное занятие</div>
+                            <h3>Пробное занятие</h3>
+                            <p>Первое знакомство с дайвингом, оборудованием и базовыми правилами безопасности.</p>
+                            <div class="course-meta">Формат: вводное занятие</div>
+                            <a href="#booking" class="card-link">Записаться</a>
+                        </article>
+
+                        <article class="course-card" id="course-open-water">
+                            <img src="images/course-open-water.jpg" alt="IDF Open Water Diver" class="course-photo">
+                            <div class="course-tag">Beginner</div>
+                            <h3>IDF Open Water Diver</h3>
+                            <p>Базовый курс для получения первой полноценной дайверской сертификации IDF.</p>
+                            <div class="course-meta">Уровень: beginner</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-advanced">
+                            <img src="images/course-advanced.jpg" alt="IDF Advanced Open Water Diver" class="course-photo">
+                            <div class="course-tag">Продолжение</div>
+                            <h3>IDF Advanced Open Water Diver</h3>
+                            <p>Следующий уровень после базового курса: развитие навыков, контроль и уверенность под водой.</p>
+                            <div class="course-meta">Глубина: до 30 м</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-junior">
+                            <img src="images/course-junior.jpg" alt="IDF Junior Open Water Diver" class="course-photo">
+                            <div class="course-tag">Для подростков</div>
+                            <h3>IDF Junior Open Water Diver</h3>
+                            <p>Курс для детей и подростков, которые хотят начать обучение дайвингу в системе IDF.</p>
+                            <div class="course-meta">Возраст: от 10 лет</div>
+                            <a href="#booking" class="card-link">Уточнить</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="course-group">
+                    <div class="course-group-heading">
+                        <span class="course-group-number">02</span>
+                        <h3>Специализации</h3>
+                    </div>
+
+                    <div class="cards-grid courses-grid">
+                        <article class="course-card" id="course-nitrox">
+                            <img src="images/course-nitrox.jpg" alt="IDF Nitrox Diver" class="course-photo">
+                            <div class="course-tag">Специализация</div>
+                            <h3>IDF Nitrox Diver</h3>
+                            <p>Курс по использованию обогащённой кислородом смеси для рекреационных погружений.</p>
+                            <div class="course-meta">Навык: nitrox</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-buoyancy">
+                            <img src="images/course-buoyancy.jpg" alt="IDF Perfect Trim & Buoyancy" class="course-photo">
+                            <div class="course-tag">Контроль</div>
+                            <h3>IDF Perfect Trim & Buoyancy</h3>
+                            <p>Отработка плавучести, положения тела в воде, спокойного движения и точного контроля.</p>
+                            <div class="course-meta">Навык: плавучесть</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-navigation">
+                            <img src="images/course-navigation.jpg" alt="IDF Navigation Diver" class="course-photo">
+                            <div class="course-tag">Ориентирование</div>
+                            <h3>IDF Navigation Diver</h3>
+                            <p>Обучение подводной навигации, работе с направлением и уверенному возвращению к точке выхода.</p>
+                            <div class="course-meta">Навык: навигация</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-night">
+                            <img src="images/course-night.jpg" alt="IDF Night Diver" class="course-photo">
+                            <div class="course-tag">Ночные погружения</div>
+                            <h3>IDF Night Diver</h3>
+                            <p>Подготовка к погружениям в условиях ограниченной видимости и ночной среды.</p>
+                            <div class="course-meta">Формат: night diving</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-deep">
+                            <img src="images/course-deep.jpg" alt="IDF Deep Diver" class="course-photo">
+                            <div class="course-tag">Глубина</div>
+                            <h3>IDF Deep Diver</h3>
+                            <p>Курс для тех, кто хочет безопасно расширить пределы рекреационных погружений.</p>
+                            <div class="course-meta">Специализация: deep</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="course-group">
+                    <div class="course-group-heading">
+                        <span class="course-group-number">03</span>
+                        <h3>Безопасность и профессиональный уровень</h3>
+                    </div>
+
+                    <div class="cards-grid courses-grid">
+                        <article class="course-card" id="course-first-aid">
+                            <img src="images/course-first-aid.jpg" alt="IDF First Aid" class="course-photo">
+                            <div class="course-tag">Безопасность</div>
+                            <h3>IDF First Aid</h3>
+                            <p>Курс первой помощи: базовые действия, реакция в экстренной ситуации и уверенность до приезда помощи.</p>
+                            <div class="course-meta">Навык: первая помощь</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-rescue">
+                            <img src="images/course-rescue.jpg" alt="IDF Rescue Diver" class="course-photo">
+                            <div class="course-tag">Rescue</div>
+                            <h3>IDF Rescue Diver</h3>
+                            <p>Обучение распознаванию проблем, помощи дайверу и действиям в нестандартных ситуациях.</p>
+                            <div class="course-meta">Навык: помощь и спасение</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+
+                        <article class="course-card" id="course-divemaster">
+                            <img src="images/course-divemaster.jpg" alt="IDF Divemaster" class="course-photo">
+                            <div class="course-tag">Pro level</div>
+                            <h3>IDF Divemaster</h3>
+                            <p>Профессиональный уровень для тех, кто хочет сопровождать дайверов и развиваться в дайв-индустрии.</p>
+                            <div class="course-meta">Уровень: professional</div>
+                            <a href="#booking" class="card-link">Подробнее</a>
+                        </article>
+                    </div>
+                </div>
             </div>
+        </section>
+        <!-- COURSES END -->
 
-            <div class="cards-grid courses-grid">
-                <article class="course-card" id="course-trial">
-                    <img src="images/course-trial.jpg" alt="Пробное занятие по дайвингу" class="course-photo">
-                    <div class="course-tag">Вводное занятие</div>
-                    <h3>Пробное занятие</h3>
-                    <p>Первое знакомство с дайвингом, оборудованием и базовыми правилами безопасности.</p>
-                    <div class="course-meta">Формат: вводное занятие</div>
-                    <a href="#booking" class="card-link">Записаться</a>
-                </article>
+        <!-- BENEFITS START -->
+        <section class="section section-deep" id="benefits">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Почему выбирают DiveTime</p>
+                    <h2>Безопасно, понятно и без лишнего стресса</h2>
+                </div>
 
-                <article class="course-card" id="course-open-water">
-                    <img src="images/course-open-water.jpg" alt="IDF Open Water Diver" class="course-photo">
-                    <div class="course-tag">Beginner</div>
-                    <h3>IDF Open Water Diver</h3>
-                    <p>Базовый курс для получения первой полноценной дайверской сертификации IDF.</p>
-                    <div class="course-meta">Уровень: beginner</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="benefit-number">01</span>
+                        <h3>Сертифицированные инструкторы</h3>
+                        <p>Занятия проходят под контролем инструкторов, которые объясняют спокойно и следят за безопасностью.</p>
+                    </div>
 
-                <article class="course-card" id="course-advanced">
-                    <img src="images/course-advanced.jpg" alt="IDF Advanced Open Water Diver" class="course-photo">
-                    <div class="course-tag">Продолжение</div>
-                    <h3>IDF Advanced Open Water Diver</h3>
-                    <p>Следующий уровень после базового курса: развитие навыков, контроль и уверенность под водой.</p>
-                    <div class="course-meta">Глубина: до 30 м</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
+                    <div class="benefit-card">
+                        <span class="benefit-number">02</span>
+                        <h3>Безопасное обучение</h3>
+                        <p>Каждый этап проходит постепенно: от знакомства со снаряжением до первых упражнений в воде.</p>
+                    </div>
 
-                <article class="course-card" id="course-junior">
-                    <img src="images/course-junior.jpg" alt="IDF Junior Open Water Diver" class="course-photo">
-                    <div class="course-tag">Для подростков</div>
-                    <h3>IDF Junior Open Water Diver</h3>
-                    <p>Курс для детей и подростков, которые хотят начать обучение дайвингу в системе IDF.</p>
-                    <div class="course-meta">Возраст: от 10 лет</div>
-                    <a href="#booking" class="card-link">Уточнить</a>
-                </article>
+                    <div class="benefit-card">
+                        <span class="benefit-number">03</span>
+                        <h3>Понятные объяснения</h3>
+                        <p>Мы объясняем простым языком, чтобы новичку было понятно, что происходит и зачем нужен каждый шаг.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">04</span>
+                        <h3>Современное оборудование</h3>
+                        <p>Снаряжение подбирается по размеру, уровню подготовки и формату занятия.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">05</span>
+                        <h3>Спокойная атмосфера</h3>
+                        <p>Можно задавать вопросы, привыкать к воде постепенно и не бояться ошибиться на первом занятии.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">06</span>
+                        <h3>Можно начать без опыта</h3>
+                        <p>Для пробного занятия не нужен опыт погружений — инструктор объяснит всё перед входом в воду.</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <!-- BENEFITS END -->
 
-        <div class="course-group">
-            <div class="course-group-heading">
-                <span>02</span>
-                <h3>Специализации</h3>
+        <!-- INSTRUCTORS START -->
+        <section class="section section-light" id="instructors">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Команда</p>
+                    <h2>Инструкторы DiveTime</h2>
+                    <p>Здесь можно добавить реальные имена, фотографии и опыт инструкторов клуба.</p>
+                </div>
+
+                <div class="instructor-grid">
+                    <article class="instructor-card">
+                        <div class="instructor-photo">АМ</div>
+                        <h3>Андрей М.</h3>
+                        <p class="instructor-role">Инструктор</p>
+                        <p>Инструктор с большим стажем и опытом.</p>
+                    </article>
+
+                    <article class="instructor-card">
+                        <img class="instructor-photo" src="images/DMTry.jpg" alt="Инструктор Даниель">
+                        <h3>Даниель М.</h3>
+                        <p class="instructor-role">Инструктор</p>
+                        <p>Работает с техникой дыхания, плавучестью и уверенностью в воде.</p>
+                    </article>
+                </div>
             </div>
+        </section>
+        <!-- INSTRUCTORS END -->
 
-            <div class="cards-grid courses-grid">
-                <article class="course-card" id="course-nitrox">
-                    <img src="images/course-nitrox.jpg" alt="IDF Nitrox Diver" class="course-photo">
-                    <div class="course-tag">Специализация</div>
-                    <h3>IDF Nitrox Diver</h3>
-                    <p>Курс по использованию обогащённой кислородом смеси для рекреационных погружений.</p>
-                    <div class="course-meta">Навык: nitrox</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
+        <!-- GALLERY START -->
+        <section class="section" id="gallery">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Галерея</p>
+                    <h2>Атмосфера клуба</h2>
+                    <p>Фотографии тренировок, бассейна, команды и подводного мира.</p>
+                </div>
 
-                <article class="course-card" id="course-buoyancy">
-                    <img src="images/course-buoyancy.jpg" alt="IDF Perfect Trim & Buoyancy" class="course-photo">
-                    <div class="course-tag">Контроль</div>
-                    <h3>IDF Perfect Trim & Buoyancy</h3>
-                    <p>Отработка плавучести, положения тела в воде, спокойного движения и точного контроля.</p>
-                    <div class="course-meta">Навык: плавучесть</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
+                <div class="gallery-grid">
+                    <div class="gallery-item large gallery-training">
+                        <span>Тренировки</span>
+                    </div>
 
-                <article class="course-card" id="course-navigation">
-                    <img src="images/course-navigation.jpg" alt="IDF Navigation Diver" class="course-photo">ы
-                    <div class="course-tag">Ориентирование</div>
-                    <h3>IDF Navigation Diver</h3>
-                    <p>Обучение подводной навигации, работе с направлением и уверенному возвращению к точке выхода.</p>
-                    <div class="course-meta">Навык: навигация</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
+                    <div class="gallery-item gallery-pool">
+                        <span>Бассейн</span>
+                    </div>
 
-                <article class="course-card" id="course-night">
-                    <img src="images/course-night.jpg" alt="IDF Night Diver" class="course-photo">
-                    <div class="course-tag">Ночные погружения</div>
-                    <h3>IDF Night Diver</h3>
-                    <p>Подготовка к погружениям в условиях ограниченной видимости и ночной среды.</p>
-                    <div class="course-meta">Формат: night diving</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
+                    <div class="gallery-item gallery-gear">
+                        <span>Снаряжение</span>
+                    </div>
 
-                <article class="course-card" id="course-deep">
-                    <img src="images/course-deep.jpg" alt="IDF Deep Diver" class="course-photo">
-                    <div class="course-tag">Глубина</div>
-                    <h3>IDF Deep Diver</h3>
-                    <p>Курс для тех, кто хочет безопасно расширить пределы рекреационных погружений.</p>
-                    <div class="course-meta">Специализация: deep</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
+                    <div class="gallery-item gallery-team">
+                        <span>Команда</span>
+                    </div>
+
+                    <div class="gallery-item wide gallery-underwater">
+                        <span>Подводный мир</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <!-- GALLERY END -->
 
-        <div class="course-group">
-            <div class="course-group-heading">
-                <span>03</span>
-                <h3>Безопасность и профессиональный уровень</h3>
-            </div>
-
-            <div class="cards-grid courses-grid">
-                <article class="course-card" id="course-first-aid">
-                    <img src="images/course-first-aid.jpg" alt="IDF First Aid" class="course-photo">
-                    <div class="course-tag">Безопасность</div>
-                    <h3>IDF First Aid</h3>
-                    <p>Курс первой помощи: базовые действия, реакция в экстренной ситуации и уверенность до приезда помощи.</p>
-                    <div class="course-meta">Навык: первая помощь</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
-
-                <article class="course-card" id="course-rescue">
-                    <img src="images/course-rescue.jpg" alt="IDF Rescue Diver" class="course-photo">
-                    <div class="course-tag">Rescue</div>
-                    <h3>IDF Rescue Diver</h3>
-                    <p>Обучение распознаванию проблем, помощи дайверу и действиям в нестандартных ситуациях.</p>
-                    <div class="course-meta">Навык: помощь и спасение</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
-
-                <article class="course-card" id="course-divemaster">
-                    <img src="images/course-divemaster.jpg" alt="IDF Divemaster" class="course-photo">
-                    <div class="course-tag">Pro level</div>
-                    <h3>IDF Divemaster</h3>
-                    <p>Профессиональный уровень для тех, кто хочет сопровождать дайверов и развиваться в дайв-индустрии.</p>
-                    <div class="course-meta">Уровень: professional</div>
-                    <a href="#booking" class="card-link">Подробнее</a>
-                </article>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-deep" id="benefits">
-    <div class="container">
-        <div class="section-heading">
-            <p class="eyebrow">Почему выбирают DiveTime</p>
-            <h2>Безопасно, понятно и без лишнего стресса</h2>
-        </div>
-
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <span class="benefit-number">01</span>
-                <h3>Сертифицированные инструкторы</h3>
-                <p>Занятия проходят под контролем инструкторов, которые объясняют спокойно и следят за безопасностью.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-number">02</span>
-                <h3>Безопасное обучение</h3>
-                <p>Каждый этап проходит постепенно: от знакомства со снаряжением до первых упражнений в воде.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-number">03</span>
-                <h3>Понятные объяснения</h3>
-                <p>Мы объясняем простым языком, чтобы новичку было понятно, что происходит и зачем нужен каждый шаг.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-number">04</span>
-                <h3>Современное оборудование</h3>
-                <p>Снаряжение подбирается по размеру, уровню подготовки и формату занятия.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-number">05</span>
-                <h3>Спокойная атмосфера</h3>
-                <p>Можно задавать вопросы, привыкать к воде постепенно и не бояться ошибиться на первом занятии.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-number">06</span>
-                <h3>Можно начать без опыта</h3>
-                <p>Для пробного занятия не нужен опыт погружений — инструктор объяснит всё перед входом в воду.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
+        <!-- FAQ START -->
         <section class="section section-light" id="faq">
             <div class="container faq-layout">
                 <div>
@@ -344,7 +417,9 @@
                 </div>
             </div>
         </section>
+        <!-- FAQ END -->
 
+        <!-- BOOKING START -->
         <section class="section booking-section" id="booking">
             <div class="container booking-grid">
                 <div>
@@ -381,11 +456,17 @@
                         <select name="course" required>
                             <option value="">Выберите вариант</option>
                             <option>Пробное занятие</option>
-                            <option>Дайвинг с нуля</option>
-                            <option>Курс для начинающих</option>
-                            <option>Тренировки в бассейне</option>
-                            <option>Подготовка к открытому водоёму</option>
-                            <option>Занятия для подростков</option>
+                            <option>IDF Open Water Diver</option>
+                            <option>IDF Advanced Open Water Diver</option>
+                            <option>IDF Junior Open Water Diver</option>
+                            <option>IDF Nitrox Diver</option>
+                            <option>IDF Perfect Trim & Buoyancy</option>
+                            <option>IDF Navigation Diver</option>
+                            <option>IDF Night Diver</option>
+                            <option>IDF Deep Diver</option>
+                            <option>IDF First Aid</option>
+                            <option>IDF Rescue Diver</option>
+                            <option>IDF Divemaster</option>
                         </select>
                     </label>
 
@@ -399,7 +480,9 @@
                 </form>
             </div>
         </section>
+        <!-- BOOKING END -->
 
+        <!-- CONTACTS START -->
         <section class="section section-light" id="contacts">
             <div class="container contacts-grid">
                 <div>
@@ -419,6 +502,7 @@
                 </div>
             </div>
         </section>
+        <!-- CONTACTS END -->
     </main>
 
     <footer class="site-footer">
