@@ -32,10 +32,10 @@ if (form && formMessage) {
             course: form.course.value,
             message: form.message.value
         };
-        emailjs.send("service_plondtu", "template_4q698od", formData)
+        emailjs.send("service_udai0uq", "template_4q698od", formData)
 
             .then(() => {
-                return emailjs.send("service_plondtu", "template_2lmx1qq", formData);
+                return emailjs.send("service_udai0uq", "template_2lmx1qq", formData);
             })
             .then(() => {
                 formMessage.textContent = "✅";
