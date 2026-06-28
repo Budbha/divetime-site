@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiveTime — diving club</title>
+    <meta name="description" content="DiveTime is a modern diving club for beginners and underwater enthusiasts. Courses, training sessions, trial lessons and safe diving education.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="alternate" hreflang="ru" href="index.html">
+    <link rel="alternate" hreflang="en" href="en.html">
+    <link rel="alternate" hreflang="et" href="et.html">
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <nav class="navbar">
+            <a href="#top" class="logo" aria-label="DiveTime home">
+                <span class="logo-mark">DT</span>
+                <span>DiveTime</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#courses">Courses</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#instructors">Instructors</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacts">Contacts</a>
+                <a href="#booking" class="nav-cta">Book now</a>
+                <div class="language-switcher" aria-label="Language switcher">
+                    <a href="index.html">RU</a>
+                    <a href="en.html" aria-current="page">EN</a>
+                    <a href="et.html">EE</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO START -->
+        <section class="hero section">
+            <div class="hero-bg-shape hero-bg-shape-one"></div>
+            <div class="hero-bg-shape hero-bg-shape-two"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">A diving club for beginners and depth lovers</p>
+                    <h1>Discover the underwater world with DiveTime</h1>
+                    <p class="hero-text">
+                        We teach diving calmly, safely and clearly. Start with a trial lesson,
+                        get familiar with the equipment and feel confident underwater.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#booking" class="btn btn-primary">Book a trial lesson</a>
+                        <a href="#courses" class="btn btn-secondary">View courses</a>
+                    </div>
+
+                    <div class="hero-stats" aria-label="Key club benefits">
+                        <div>
+                            <strong>0+</strong>
+                            <span>no experience needed</span>
+                        </div>
+                        <div>
+                            <strong>1:1</strong>
+                            <span>individual approach</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>focus on safety</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Photo from a trial diving lesson">
+                    <div class="diver-card photo-card">
+                        <img src="images/divehero.webp" alt="Divers underwater" class="hero-card-photo">
+
+                        <div class="hero-card-content">
+                            <h2>Trial lesson</h2>
+                            <p>A gentle introduction to diving in a calm environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HERO END -->
+
+        <!-- ABOUT START -->
+        <section class="section section-light" id="about">
+            <div class="container two-column">
+                <div>
+                    <p class="eyebrow">About</p>
+                    <h2>DiveTime — a place where depth feels closer</h2>
+                </div>
+
+                <div class="text-block">
+                    <p>
+                        We help people take their first step into diving without fear or pressure.
+                        During the lessons, the instructor explains everything in simple words: how the equipment works,
+                        how to breathe, how to behave in the water and what to do if you feel unsure.
+                    </p>
+                    <p>
+                        DiveTime is suitable for those who have never tried diving before, want to feel more confident
+                        in the water or plan to prepare for open water dives.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT END -->
+
+        <!-- COURSES START -->
+        <section class="section" id="courses">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Courses and lessons</p>
+                    <h2>Choose your training path</h2>
+                    <p>
+                        You can start with a trial lesson, complete a basic course or continue your training
+                        through specializations, safety courses and professional levels.
+                    </p>
+                </div>
+
+                <div class="course-group">
+                    <div class="course-group-heading">
+                        <span class="course-group-number">01</span>
+                        <h3>Start and basic training</h3>
+                    </div>
+
+                    <div class="cards-grid courses-grid">
+                        <article class="course-card" id="course-trial">
+                            <img src="images/course-trial.webp" alt="Trial diving lesson" class="course-photo">
+                            <div class="course-tag">Introductory lesson</div>
+                            <h3>Trial lesson</h3>
+                            <p>Your first introduction to diving, equipment and basic safety rules.</p>
+                            <div class="course-meta">Format: introductory lesson</div>
+                            <a href="#booking" class="card-link">Book now</a>
+                        </article>
+
+                        <article class="course-card" id="course-open-water">
+                            <img src="images/course-open-water.webp" alt="IDF Open Water Diver" class="course-photo">
+                            <div class="course-tag">Beginner</div>
+                            <h3>IDF Open Water Diver</h3>
+                            <p>A basic course for obtaining your first full IDF diving certification.</p>
+                            <div class="course-meta">Level: beginner</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-advanced">
+                            <img src="images/course-advanced.webp" alt="IDF Advanced Open Water Diver" class="course-photo">
+                            <div class="course-tag">Next level</div>
+                            <h3>IDF Advanced Open Water Diver</h3>
+                            <p>The next step after the basic course: deeper skills, control and confidence underwater.</p>
+                            <div class="course-meta">Depth: up to 30 m</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-junior">
+                            <img src="images/course-junior.webp" alt="IDF Junior Open Water Diver" class="course-photo">
+                            <div class="course-tag">For teenagers</div>
+                            <h3>IDF Junior Open Water Diver</h3>
+                            <p>A course for children and teenagers who want to start diving training in the IDF system.</p>
+                            <div class="course-meta">Age: from 10 years</div>
+                            <a href="#booking" class="card-link">Ask for details</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="course-group">
+                    <div class="course-group-heading">
+                        <span class="course-group-number">02</span>
+                        <h3>Specializations</h3>
+                    </div>
+
+                    <div class="cards-grid courses-grid">
+                        <article class="course-card" id="course-nitrox">
+                            <img src="images/course-nitrox.webp" alt="IDF Nitrox Diver" class="course-photo">
+                            <div class="course-tag">Specialization</div>
+                            <h3>IDF Nitrox Diver</h3>
+                            <p>A course on using enriched air mixtures for recreational dives.</p>
+                            <div class="course-meta">Skill: nitrox</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-buoyancy">
+                            <img src="images/course-buoyancy.webp" alt="IDF Perfect Trim & Buoyancy" class="course-photo">
+                            <div class="course-tag">Control</div>
+                            <h3>IDF Perfect Trim & Buoyancy</h3>
+                            <p>Practice buoyancy, body position in the water, calm movement and precise control.</p>
+                            <div class="course-meta">Skill: buoyancy</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-navigation">
+                            <img src="images/course-navigation.webp" alt="IDF Navigation Diver" class="course-photo">
+                            <div class="course-tag">Navigation</div>
+                            <h3>IDF Navigation Diver</h3>
+                            <p>Underwater navigation training, working with direction and returning confidently to the exit point.</p>
+                            <div class="course-meta">Skill: navigation</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-night">
+                            <img src="images/course-night.webp" alt="IDF Night Diver" class="course-photo">
+                            <div class="course-tag">Night diving</div>
+                            <h3>IDF Night Diver</h3>
+                            <p>Preparation for dives in limited visibility and night conditions.</p>
+                            <div class="course-meta">Format: night diving</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-deep">
+                            <img src="images/course-deep.webp" alt="IDF Deep Diver" class="course-photo">
+                            <div class="course-tag">Depth</div>
+                            <h3>IDF Deep Diver</h3>
+                            <p>A course for divers who want to safely expand the limits of recreational diving.</p>
+                            <div class="course-meta">Specialization: deep</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="course-group">
+                    <div class="course-group-heading">
+                        <span class="course-group-number">03</span>
+                        <h3>Safety and professional level</h3>
+                    </div>
+
+                    <div class="cards-grid courses-grid">
+                        <article class="course-card" id="course-first-aid">
+                            <img src="images/course-first-aid.webp" alt="IDF First Aid" class="course-photo">
+                            <div class="course-tag">Safety</div>
+                            <h3>IDF First Aid</h3>
+                            <p>A first aid course: basic actions, emergency response and confidence until help arrives.</p>
+                            <div class="course-meta">Skill: first aid</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-rescue">
+                            <img src="images/course-rescue.webp" alt="IDF Rescue Diver" class="course-photo">
+                            <div class="course-tag">Rescue</div>
+                            <h3>IDF Rescue Diver</h3>
+                            <p>Training in recognizing problems, helping another diver and acting in unusual situations.</p>
+                            <div class="course-meta">Skill: assistance and rescue</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+
+                        <article class="course-card" id="course-divemaster">
+                            <img src="images/course-divemaster.webp" alt="IDF Divemaster" class="course-photo">
+                            <div class="course-tag">Pro level</div>
+                            <h3>IDF Divemaster</h3>
+                            <p>A professional level for those who want to guide divers and grow in the diving industry.</p>
+                            <div class="course-meta">Level: professional</div>
+                            <a href="#booking" class="card-link">Learn more</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- COURSES END -->
+
+        <!-- BENEFITS START -->
+        <section class="section section-deep" id="benefits">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Why people choose DiveTime</p>
+                    <h2>Safe, clear and without unnecessary stress</h2>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="benefit-number">01</span>
+                        <h3>Certified instructors</h3>
+                        <p>Lessons take place under the supervision of instructors who explain calmly and monitor safety.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">02</span>
+                        <h3>Safe training</h3>
+                        <p>Every step is gradual: from getting familiar with the equipment to the first exercises in the water.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">03</span>
+                        <h3>Clear explanations</h3>
+                        <p>We explain everything in simple language so beginners understand what is happening and why each step matters.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">04</span>
+                        <h3>Modern equipment</h3>
+                        <p>Equipment is selected according to size, training level and lesson format.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">05</span>
+                        <h3>Calm atmosphere</h3>
+                        <p>You can ask questions, get used to the water gradually and not be afraid of making mistakes during the first lesson.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span class="benefit-number">06</span>
+                        <h3>You can start without experience</h3>
+                        <p>You do not need diving experience for a trial lesson — the instructor will explain everything before entering the water.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BENEFITS END -->
+
+        <!-- INSTRUCTORS START -->
+        <section class="section section-light" id="instructors">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Team</p>
+                    <h2>DiveTime instructors</h2>
+                    <p>Here you can add the real names, photos and experience of the club instructors.</p>
+                </div>
+
+                <div class="instructor-grid">
+                    <article class="instructor-card">
+                        <div class="instructor-photo">AM</div>
+                        <h3>Andrei M.</h3>
+                        <p class="instructor-role">Instructor</p>
+                        <p>An instructor with extensive experience and practice.</p>
+                    </article>
+
+                    <article class="instructor-card">
+                        <img class="instructor-photo" src="images/DMTry.webp" alt="Instructor Daniel">
+                        <h3>Daniel M.</h3>
+                        <p class="instructor-role">Instructor</p>
+                        <p>Works with breathing technique, buoyancy and confidence in the water.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- INSTRUCTORS END -->
+
+        <!-- GALLERY START -->
+        <section class="section" id="gallery">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Gallery</p>
+                    <h2>Club atmosphere</h2>
+                    <p>Photos of training sessions, the pool, the team and the underwater world.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item large gallery-training">
+                        <span>Training</span>
+                    </div>
+
+                    <div class="gallery-item gallery-pool">
+                        <span>Pool</span>
+                    </div>
+
+                    <div class="gallery-item gallery-gear">
+                        <span>Equipment</span>
+                    </div>
+
+                    <div class="gallery-item gallery-team">
+                        <span>Team</span>
+                    </div>
+
+                    <div class="gallery-item wide gallery-underwater">
+                        <span>Underwater world</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- GALLERY END -->
+
+        <!-- FAQ START -->
+        <section class="section section-light" id="faq">
+            <div class="container faq-layout">
+                <div>
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Common beginner questions</h2>
+                    <p class="muted">
+                        The most important thing is that you can start calmly. The instructor will be nearby and explain everything.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+                    <details open>
+                        <summary>Can I join without experience?</summary>
+                        <p>Yes. A trial lesson is designed exactly for people who have never tried diving before.</p>
+                    </details>
+
+                    <details>
+                        <summary>Is it safe?</summary>
+                        <p>Yes, if training takes place with an instructor and the rules are followed. Everything is done step by step during the lesson.</p>
+                    </details>
+
+                    <details>
+                        <summary>Do I need to swim well?</summary>
+                        <p>You do not need to be an athlete. Basic comfort in the water and listening to the instructor are enough.</p>
+                    </details>
+
+                    <details>
+                        <summary>What should I bring?</summary>
+                        <p>Usually you need swimwear, a towel, slippers and a good mood. We will clarify the rest before the lesson.</p>
+                    </details>
+
+                    <details>
+                        <summary>From what age can you start?</summary>
+                        <p>The age depends on the lesson format and club rules. It is best to ask when booking.</p>
+                    </details>
+
+                    <details>
+                        <summary>How long does a lesson last?</summary>
+                        <p>A trial lesson usually takes around 60–90 minutes, including explanation and preparation.</p>
+                    </details>
+
+                    <details>
+                        <summary>Do I need my own equipment?</summary>
+                        <p>No. For a trial lesson and training, the club usually provides the equipment.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ END -->
+
+        <!-- BOOKING START -->
+        <section class="section booking-section" id="booking">
+            <div class="container booking-grid">
+                <div>
+                    <p class="eyebrow">Booking</p>
+                    <h2>Book a trial lesson</h2>
+                    <p>
+                        Leave a request — we will contact you, choose a convenient time
+                        and explain how to prepare for your first lesson.
+                    </p>
+
+                    <div class="booking-note">
+                        <strong>Most important:</strong> no experience is needed. You only need the desire to try and the willingness to listen to the instructor.
+                    </div>
+                </div>
+
+                <form class="booking-form">
+                    <label>
+                        Name
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </label>
+
+                    <label>
+                        Phone
+                        <input type="tel" name="phone" placeholder="+372 ..." required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="name@email.com">
+                    </label>
+
+                    <label>
+                        Course of interest
+                        <select name="course" required>
+                            <option value="">Choose an option</option>
+                            <option>Trial lesson</option>
+                            <option>IDF Open Water Diver</option>
+                            <option>IDF Advanced Open Water Diver</option>
+                            <option>IDF Junior Open Water Diver</option>
+                            <option>IDF Nitrox Diver</option>
+                            <option>IDF Perfect Trim & Buoyancy</option>
+                            <option>IDF Navigation Diver</option>
+                            <option>IDF Night Diver</option>
+                            <option>IDF Deep Diver</option>
+                            <option>IDF First Aid</option>
+                            <option>IDF Rescue Diver</option>
+                            <option>IDF Divemaster</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Comment
+                        <textarea name="message" rows="4" placeholder="For example: I want to try for the first time and have questions about safety"></textarea>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Send request</button>
+                    <p class="form-message" role="status"></p>
+                </form>
+            </div>
+        </section>
+        <!-- BOOKING END -->
+
+        <!-- CONTACTS START -->
+        <section class="section section-light" id="contacts">
+            <div class="container contacts-grid">
+                <div>
+                    <p class="eyebrow">Contacts</p>
+                    <h2>Contact DiveTime</h2>
+
+                    <div class="contact-list">
+                        <p><strong>Phone:</strong> +372 55599896</p>
+                        <p><strong>Email:</strong> malkov.daniel@gmail.com</p>
+                        <p><strong>Address:</strong> Raua 1</p>
+                        <p><strong>Social media:</strong> Instagram · Facebook · TikTok</p>
+                    </div>
+                </div>
+
+               <div class="map-card">
+                <iframe
+                    src="https://maps.google.com/maps?q=Raua%201%2C%20Tallinn%2C%20Estonia&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="DiveTime on the map">
+                </iframe>
+            </div>
+            </div>
+        </section>
+        <!-- CONTACTS END -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 DiveTime. All rights reserved.</p>
+            <a href="#top">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
