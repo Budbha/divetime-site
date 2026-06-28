@@ -793,31 +793,31 @@ p {
 #gallery .gallery-training {
     background-image:
         linear-gradient(rgba(6, 27, 51, 0.12), rgba(6, 27, 51, 0.68)),
-        url("images/gallery-training.jpg");
+        url("images/gallery-training.webp");
 }
 
 #gallery .gallery-pool {
     background-image:
         linear-gradient(rgba(6, 27, 51, 0.12), rgba(6, 27, 51, 0.68)),
-        url("images/gallery-pool.jpg");
+        url("images/gallery-pool.webp");
 }
 
 #gallery .gallery-gear {
     background-image:
         linear-gradient(rgba(6, 27, 51, 0.12), rgba(6, 27, 51, 0.68)),
-        url("images/gallery-gear.jpg");
+        url("images/gallery-gear.webp");
 }
 
 #gallery .gallery-team {
     background-image:
         linear-gradient(rgba(6, 27, 51, 0.12), rgba(6, 27, 51, 0.68)),
-        url("images/gallery-team.jpg");
+        url("images/gallery-team.webp");
 }
 
 #gallery .gallery-underwater {
     background-image:
         linear-gradient(rgba(6, 27, 51, 0.12), rgba(6, 27, 51, 0.68)),
-        url("images/gallery-underwater.jpg");
+        url("images/gallery-underwater.webp");
 }
 }
 
