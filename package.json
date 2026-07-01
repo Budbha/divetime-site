@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "start": "vercel dev"
+    "start": "node server.js",
+    "dev": "node --env-file=.env server.js"
   },
   "dependencies": {
+    "express": "^4.21.0",
     "resend": "^4.8.0"
   },
   "description": "Готовый статический сайт для дайв-клуба DiveTime.",
