@@ -1,0 +1,23 @@
+{
+  "name": "divetime",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "resend": "^4.8.0"
+  },
+  "description": "Готовый статический сайт для дайв-клуба DiveTime.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Budbha/divetime-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Budbha/divetime-site/issues"
+  },
+  "homepage": "https://github.com/Budbha/divetime-site#readme"
+}
