@@ -8,9 +8,8 @@ const PORT = process.env.PORT || 3000;
 // Разрешаем парсинг JSON в теле запросов
 app.use(express.json());
 
-// Отдаем статические файлы из корневой директории
-app.use(express.static(__dirname));
-
+// Статические файлы подключим ниже, после явных маршрутов
+// (чтобы маршруты вида /en и /ru обрабатывались явно).
 function escapeHtml(value = "") {
     return String(value)
         .replaceAll("&", "&amp;")
@@ -157,9 +156,26 @@ app.post("/api/send", async (req, res) => {
     }
 });
 
-// Все остальные GET-запросы возвращают index.html
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+
+// Явные маршруты для чистых URL (без .html)
+app.get('/en', (req, res) => {
+    res.sendFile(path.join(__dirname, 'en.html'));
+});
+
+app.get('/ru', (req, res) => {
+    res.sendFile(path.join(__dirname, 'ru.html'));
+});
+
+// Редиректы старых URL с .html -> чистые URL
+app.get('/en.html', (req, res) => res.redirect(301, '/en'));
+app.get('/ru.html', (req, res) => res.redirect(301, '/ru'));
+
+// Отдаём остальные статические файлы (скрипты, стили, изображения и т.д.)
+app.use(express.static(__dirname));
+
+// Все остальные GET-запросы возвращают index.html (SPA fallback)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
